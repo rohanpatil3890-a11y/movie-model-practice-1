@@ -218,7 +218,7 @@ function onsubmitEvent(eve) {
 
 
 function onRemove(ele) {
-
+          loader(true)
     Swal.fire({
         title: "Do you want to remove the Movie?",
         showCancelButton: true,
@@ -229,7 +229,7 @@ function onRemove(ele) {
         if (result.isConfirmed) {
 
 
-            loader(true)
+            
             let REMOVE_ID = ele.closest(".col-md-3").id;
             let REMOVE_URL = `${BASE_URL}/movies/${REMOVE_ID}.json`;
 
