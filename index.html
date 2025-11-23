@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        movie-model
+    </title>
+    <script src="https://kit.fontawesome.com/483e17999d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+
+<body>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <header>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                        <a href="index.html" class="logo">
+                            <img src="./assets/img/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-item-center">
+                        <button id="movieModelBtn" class="btn btn-sm nfx-pri-btn"> Add movie</button>
+                    </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="rowContainer">
+            <!-- <div class="col-md-3 col-sm-6">
+                <div class="card movie-card text-white">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-10">
+                                <h2>Pushpa 2: The Rule</h2>
+                            </div>
+                            <div class="col-2">
+                                <h4><span class="badge badge-success">5</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <figure>
+                            <img src="https://img.nowrunning.com/content/movie/2023/pushp-27946/bg8-pushpa-2.jpg" alt="pushpa-2" title="pushpa2">
+                            <figcaption>
+                                <h5>Pushpa 2: The Rule</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo temporibus omnis molestiae, repudiandae,
+                             velit explicabo molestias tenetur cumque aspernatur dignissimos error ab est, saepe commodi hic facere? Ducimus, ut optio?
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm nfx-sec-btn">Edit</button>
+                         <button class="btn btn-sm nfx-pri-btn">Remove</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+     <div class="backDrop closeBtn" id="backDrop"></div>
+
+ <div class="movieModel" id="movieModel">
+    <form id="formId">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-item-center">
+                <h4>Add Movie Details</h4>
+                <i class="fa-solid fa-xmark fa-2x closeBtn"></i>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="movieName">Movie Name</label>
+                    <input type="text" id="movieName" class="form-control" required>
+                    <label for="movieImg">Movie Img</label>
+                    <input type="text" id="movieImg" class="form-control" required>
+                    <label for="moviedec">Movie Dec</label>
+                    <textarea type="text" id="moviedec" class="form-control" required></textarea>
+                     <label for="movieRating">Movie Rating</label>
+                     <select id="movieRating" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-item-center">
+                <button id="submitBtn"  type="submit" class="btn btn-outline-primary btn-sm ">Add Item</button>
+                <button id="updateBtn" type="button" class="btn btn-outline-primary btn-sm  d-none">Update</button>
+                <button id="closeBtn" type="button" class="closeBtn btn btn-outline-danger btn-sm">close</button>
+            </div>
+        </div>
+    </form>
+ </div>
+
+   <div class="loder d-none" id="loder">
+        <div class="spinner-border text-primary" role="status">
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
